@@ -120,7 +120,8 @@ def train_model(model, optimizer, train_dl, valid_dl, epochs=10):
             train_loss.append(loss.item())
         ### END SOLUTION
         valid_loss, valid_acc = valid_metrics(model, valid_dl)
-        print(np.mean(train_loss), valid_loss,valid_acc)
+        print(f"training accruracy:{np.mean(train_loss)}, validation loss: {valid_loss}, and validation accuracy:{valid_acc} ")
+        #print(np.mean(train_loss), valid_loss,valid_acc)
         
         
 def valid_metrics(model, valid_dl):
